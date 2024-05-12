@@ -1,0 +1,19 @@
+
+{
+    "manifest_version": 3,
+    "name": "Advanced Amazon Prime Video",
+    "version": "1.0",
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+        "default_title": "Toggle X-Ray/ Disable Overlay/ Seek Control"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+    {
+      "matches": ["https://www.primevideo.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
